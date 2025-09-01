@@ -1,0 +1,13 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    { "label": "tests", "type": "shell", "command": "uv run pytest" },
+    {
+      "label": "lint",
+      "type": "shell",
+      "command": "uv run ruff check . --fix"
+    },
+    { "label": "format", "type": "shell", "command": "uv run ruff format ." },
+    { "label": "typecheck", "type": "shell", "command": "uv run pyrefly check" }
+  ]
+}

@@ -1,0 +1,27 @@
+[project]
+name = "python-uv-starter"
+version = "0.1.0"
+description = "VS Code Dev Container starter kit with uv + Ruff + Pyrefly (Python 3.13)"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "ruff>=0.6.0",
+    "pytest>=8.3",
+    "pytest-cov>=5.0",
+    "pyrefly"
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py313"
+
+[tool.pyrefly]
+search_path = ["src"]
+project_includes = ["src/**/*.py", "tests/**/*.py"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+pythonpath = ["src"]
